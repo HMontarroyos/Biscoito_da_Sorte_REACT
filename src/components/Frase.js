@@ -1,17 +1,4 @@
-import React,{Component} from 'react'
-import '../css/styles.css'
-
-
-class Frase extends Component{
-  constructor(props){
-    super(props);
-    this.state ={
-      textoFrase:''
-    }
-
-    this.quebraBiscoito = this.quebraBiscoito.bind(this);
-
-    this.frases = [
+const frases = [
       'A persistência é o caminho do êxito.',
     'As pessoas costumam dizer que a motivação não dura sempre. Bem, nem o efeito do banho, por isso recomenda-se diariamente.',
     'Motivação é a arte de fazer as pessoas fazerem o que você quer que elas façam porque elas o querem fazer.',
@@ -34,27 +21,6 @@ class Frase extends Component{
     'Nossa maior fraqueza está em desistir. O caminho mais certo de vencer é tentar mais uma vez.'
         
     ]
-    
-  }
-
-quebraBiscoito(){
-  let state = this.state;
-  let numeroAleatorio = Math.floor(Math.random()* this.frases.length);
-  state.textoFrase = this.frases[numeroAleatorio];
-  this.setState(state);
-}
 
 
-  render(){
-    return(
-      <div className="container">  
-        <h3 className="frase">{this.state.textoFrase}</h3>
-      </div>
-    );
-  }
-}
-
-
-
-
-export default Frase;
+export default frases;
